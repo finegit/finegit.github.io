@@ -5,19 +5,23 @@
   
 
   
-  <title>Hello World | Hexo</title>
+  <title>Myeclipse设置全局编码 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="在使用Eclipse+MyEclipse开发中，许多文件编码默认是ISO-8859-1，不支持中文（如常用的JSP）。这样我们每次建文件都要手动改编码，其实我们可以在设置文件默认编码，今后再创建时就不用每次修改编码了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/06/24/hello-world/index.html">
+<meta property="og:title" content="Myeclipse设置全局编码">
+<meta property="og:url" content="http://yoursite.com/2018/06/25/Myeclipse设置全局编码/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="在使用Eclipse+MyEclipse开发中，许多文件编码默认是ISO-8859-1，不支持中文（如常用的JSP）。这样我们每次建文件都要手动改编码，其实我们可以在设置文件默认编码，今后再创建时就不用每次修改编码了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-25T03:06:58.872Z">
+<meta property="og:image" content="http://yoursite.com/2018/06/25/Myeclipse设置全局编码/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/25/Myeclipse设置全局编码/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/25/Myeclipse设置全局编码/3.jpg">
+<meta property="og:updated_time" content="2019-06-25T09:14:43.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Myeclipse设置全局编码">
+<meta name="twitter:description" content="在使用Eclipse+MyEclipse开发中，许多文件编码默认是ISO-8859-1，不支持中文（如常用的JSP）。这样我们每次建文件都要手动改编码，其实我们可以在设置文件默认编码，今后再创建时就不用每次修改编码了。">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/25/Myeclipse设置全局编码/1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,12 +68,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="w-Myeclipse设置全局编码" class="article article-type-w" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/06/24/hello-world/" class="article-date">
-  <time datetime="2019-06-24T10:03:04.038Z" itemprop="datePublished">2019-06-24</time>
+    <a href="/2018/06/25/Myeclipse设置全局编码/" class="article-date">
+  <time datetime="2018-06-25T09:10:42.000Z" itemprop="datePublished">2018-06-25</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/软件/">软件</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -78,7 +86,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Myeclipse设置全局编码
     </h1>
   
 
@@ -86,25 +94,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
+        <p>1、windows-&gt;Preferences打开”首选项”对话框，左侧导航树，导航到general-&gt;Workspace</p>
+<p>右侧Text file encoding，选择Other，改变为UTF-8</p>
+<p>以后新建立工程其属性对话框中的Text file encoding即为UTF-8。</p>
 <a id="more"></a>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p><img src="/2018/06/25/Myeclipse设置全局编码/1.jpg" alt="image"><br>2、windows-&gt;Preferences打开”首选项”对话框，左侧导航树，导航到general-&gt;Content Types</p>
+<p>右侧Context Types树，点开Text中每一颗子项,并在中输入”UTF-8”,点update! 
+<img src="/2018/06/25/Myeclipse设置全局编码/2.jpg" alt="image"><br>其他java应用开发相关的文件如：properties、XML等已经由Eclipse缺省指定</p>
+<p>分别为ISO8859-1，UTF-8，如开发中确需改变编码格式则可以在此指定。 </p>
+<p>3、window–&gt;preference–&gt;MyEclipse–&gt;Files and Editors</p>
+<p>将每个子项的”Encoding”改为”ISO 10645/Unicode(UTF-8)”,点Apply<br><img src="/2018/06/25/Myeclipse设置全局编码/3.jpg" alt="image"><br>本文结束。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/24/hello-world/" data-id="cjxbnz7kv0001jktycb6jfgln" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/25/Myeclipse设置全局编码/" data-id="cjxbnz7ke0000jktyy0wue7gx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -113,20 +117,15 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/06/25/java解密微信小程序运动数据/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/04/13/百度富文本Ueditor编辑器的使用/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          java解密微信小程序运动数据
+          百度富文本Ueditor编辑器的使用
         
       </div>
     </a>
   
-  
-    <a href="/2019/04/13/百度富文本Ueditor编辑器的使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">百度富文本Ueditor编辑器的使用</div>
-    </a>
   
 </nav>
 
