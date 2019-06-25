@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      百度富文本Ueditor编辑器的使用 | Blog
+      java解密微信小程序运动数据 | Blog
     
   </title>
   <meta name="author" content="finegit">
@@ -164,7 +164,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《百度富文本Ueditor编辑器的使用》
+			当前文章&nbsp;:&nbsp;《java解密微信小程序运动数据》
 		
 	</p>
 
@@ -273,8 +273,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/04/13/百度富文本Ueditor编辑器的使用/" itemprop="url">
-		百度富文本Ueditor编辑器的使用
+	<a href="/2019/05/03/java解密微信小程序运动数据/" itemprop="url">
+		java解密微信小程序运动数据
 	</a>
 
 	</div>
@@ -287,9 +287,9 @@
 
 	发布于
 
-	<a href="/2019/04/13/百度富文本Ueditor编辑器的使用/" itemprop="url">
-		<time datetime="2019-04-13T07:29:52.000Z" itemprop="datePublished">
-	  		2019-04-13
+	<a href="/2019/05/03/java解密微信小程序运动数据/" itemprop="url">
+		<time datetime="2019-05-03T10:05:37.000Z" itemprop="datePublished">
+	  		2019-05-03
 	  </time>
 	</a>
 	&nbsp;
@@ -305,8 +305,8 @@
 
 	更新于
 
-	<a href="/2019/04/13/百度富文本Ueditor编辑器的使用/" itemprop="url">
-		<time datetime="2019-04-13T07:29:52.000Z" itemprop="dateUpdated">
+	<a href="/2019/05/03/java解密微信小程序运动数据/" itemprop="url">
+		<time datetime="2019-05-03T10:05:37.000Z" itemprop="dateUpdated">
 	  		2019-06-25
 	  </time>
 	</a> 
@@ -318,8 +318,8 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/UEditor/" class=" ">
-			UEditor
+		<a href="/tags/解密-微信小程序/" class=" ">
+			解密,微信小程序
 		</a>
 	
 		
@@ -332,25 +332,12 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<p>UEditor官网下载地址：<a href="https://ueditor.baidu.com/website/download.html" target="_blank" rel="noopener">https://ueditor.baidu.com/website/download.html</a></p>
+		<p>想解密微信运动用户的步数，需获取到小程序的APPID，SESSIONKEY，encryptedData，iv</p>
 <a id="more"></a>
-<p><img src="/2019/04/13/百度富文本Ueditor编辑器的使用/1.jpg" alt="image"><br>这里我下载的是jsp版本中的UTF-8版，然后将压缩包解压之后是这个样子<br><img src="/2019/04/13/百度富文本Ueditor编辑器的使用/2.png" alt="image"><br>解压内容中的index.html是官方给我们提供的一个富文本使用例程，打开页面可以体验到各种富文本操作</p>
-<p>接下来将UEditor应用到我们自己的项目中</p>
-<p>1、新建一个动态Web工程<br><img src="/2019/04/13/百度富文本Ueditor编辑器的使用/3.png" alt="image"><br>2、将解压到的UEditor文件拷贝到新建工程的WebContent目录下<br><img src="/2019/04/13/百度富文本Ueditor编辑器的使用/4.png" alt="image"><br>这时会报错，不用担心。原因是我们还没有将UEditor需要用到的jar包加入到工程环境当中。</p>
-<p>接下来打开目录jsp-&gt;lib，将lib下面的所有jar包全部拷贝到WEB-INF/lib文件中，eclipse会自动将新导入的包加入到工程环境当中。</p>
-<p>3、新建一个ueditor.jsp页面，开始导入UEditor富文本编辑器</p>
-<p>注意：在导入UEditor时必须要的3个文件，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;ueditor/ueditor.config.js&quot;&gt;&lt;/script&gt; &lt;!--ueditor的配置文件--&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;ueditor/ueditor.all.min.js&quot;&gt;&lt;/script&gt; &lt;!--ueditor核心文件--&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;ueditor/lang/zh-cn/zh-cn.js&quot;&gt;&lt;/script&gt; &lt;!--ueditor语言文件--&gt;</span><br></pre></td></tr></table></figure>
-<p>导入这3个文件之后在需要调用UEditor的位置加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">&lt;script id=&quot;editor&quot; type=&quot;text/plain&quot; style=&quot;width:1024px;height:500px;&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>最后通过初始化UEditor,让它显示出来</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">        var ue = UE.getEditor(&apos;editor&apos;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>页面全部代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;</span><br><span class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;ueditor/ueditor.config.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;ueditor/ueditor.all.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;ueditor/lang/zh-cn/zh-cn.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;title&gt;ueditor&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div style=&quot;width: 300px; height: 200px;&quot;&gt;</span><br><span class="line">        &lt;script id=&quot;editor&quot; type=&quot;text/plain&quot; style=&quot;width:1024px;height:500px;&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">        var ue = UE.getEditor(&apos;editor&apos;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p>效果如下:<br><img src="/2019/04/13/百度富文本Ueditor编辑器的使用/5.png" alt="image"><br>注意：1、当文本框中的内容随<form>表单一起提交的时候，内容存储在editorValue变量中，在后台提取内容的时候可以读取此变量</form></p>
-<p>2、在需要上传图片的时候，需要配置图片路径，否则上传的图片在富文本编辑器中是无法显示出来的。</p>
-<p>   在ueditor—&gt;jsp—–&gt;lib—-&gt;config.json文件中更改图片路径<br>   <img src="/2019/04/13/百度富文本Ueditor编辑器的使用/6.png" alt="image"><br>3、在将富文本编辑器的路径加入到ueditor.config.js当中<br><img src="/2019/04/13/百度富文本Ueditor编辑器的使用/7.png" alt="image"><br><img src="/2019/04/13/百度富文本Ueditor编辑器的使用/8.png" alt="image"><br> 到此配置完成！！！</p>
-	
+<p>WXBizDataCrypt为封装好的解密的工具类<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">package com.healthyLifeAssistant.util;</span><br><span class="line"></span><br><span class="line">import org.json.JSONObject;</span><br><span class="line">import sun.misc.BASE64Decoder;</span><br><span class="line"></span><br><span class="line">import javax.crypto.Cipher;</span><br><span class="line">import javax.crypto.spec.IvParameterSpec;</span><br><span class="line">import javax.crypto.spec.SecretKeySpec;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 微信小程序</span><br><span class="line"> * 数据解密算法</span><br><span class="line"> *</span><br><span class="line"> * </span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class WXBizDataCrypt &#123;</span><br><span class="line"></span><br><span class="line">    private String appId;</span><br><span class="line"></span><br><span class="line">    private String sessionKey;</span><br><span class="line"></span><br><span class="line">    public WXBizDataCrypt(String appId, String sessionKey) &#123;</span><br><span class="line">        this.appId = appId;</span><br><span class="line">        this.sessionKey = sessionKey;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 1.对称解密使用的算法为 WXBizDataCrypt-128-CBC，数据采用PKCS#7填充。</span><br><span class="line">     * 2.对称解密的目标密文为 Base64_Decode(encryptedData)。</span><br><span class="line">     * 3.对称解密秘钥 aeskey = Base64_Decode(session_key), aeskey 是16字节。</span><br><span class="line">     * 4.对称解密算法初始向量 为Base64_Decode(iv)，其中iv由数据接口返回。</span><br><span class="line">     * @param</span><br><span class="line">     * @throws Exception</span><br><span class="line">     */</span><br><span class="line">    public JSONObject decrypt(String encryptedData, String iv) throws Exception &#123;</span><br><span class="line">        String jsonStr = new String(&quot;&quot;);</span><br><span class="line">        try &#123;</span><br><span class="line">            BASE64Decoder base64Decoder = new BASE64Decoder();</span><br><span class="line">            /**</span><br><span class="line">             * 小程序加密数据解密算法</span><br><span class="line">             * https://developers.weixin.qq.com/miniprogram/dev/api/signature.html#wxchecksessionobject</span><br><span class="line">             * 1.对称解密的目标密文为 Base64_Decode(encryptedData)。</span><br><span class="line">             * 2.对称解密秘钥 aeskey = Base64_Decode(session_key), aeskey 是16字节。</span><br><span class="line">             * 3.对称解密算法初始向量 为Base64_Decode(iv)，其中iv由数据接口返回。</span><br><span class="line">             */</span><br><span class="line">            byte[] encryptedByte = base64Decoder.decodeBuffer(encryptedData);</span><br><span class="line">            byte[] sessionKeyByte = base64Decoder.decodeBuffer(this.sessionKey);</span><br><span class="line">            byte[] ivByte = base64Decoder.decodeBuffer(iv);</span><br><span class="line">            /**</span><br><span class="line">             * 以下为AES-128-CBC解密算法</span><br><span class="line">             */</span><br><span class="line">            SecretKeySpec skeySpec = new SecretKeySpec(sessionKeyByte, &quot;AES&quot;);</span><br><span class="line">            Cipher cipher = Cipher.getInstance(&quot;AES/CBC/PKCS5Padding&quot;);</span><br><span class="line">            IvParameterSpec ivParameterSpec = new IvParameterSpec(ivByte);</span><br><span class="line">            cipher.init(Cipher.DECRYPT_MODE, skeySpec, ivParameterSpec);</span><br><span class="line">            byte[] original = cipher.doFinal(encryptedByte);</span><br><span class="line">            jsonStr = new String(original);</span><br><span class="line">        &#125; catch (Exception ex) &#123;</span><br><span class="line">            throw new Exception(&quot;Illegal Buffer&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        JSONObject jsonObject = new JSONObject(jsonStr);</span><br><span class="line">        if (!jsonObject.getJSONObject(Constants.WEAPP_WATERMARK).get(Constants.WEAPP_APPID).toString().equals(this.appId))&#123;</span><br><span class="line">            throw new Exception(&quot;Illegal Buffer&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        return jsonObject;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br></pre></td></tr></table></figure><br>调用工具类中的decrypt的方法，对数据进行解密</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">//解密微信小程序</span><br><span class="line">	public String Decrypt() throws Exception&#123;</span><br><span class="line">		HttpServletRequest request = ServletActionContext.getRequest();</span><br><span class="line">		String appId = &quot;wx06f8d5bdc9d227c9&quot;;</span><br><span class="line">	    String sessionKey = request.getParameter(&quot;sessionKey&quot;);</span><br><span class="line">	    String encryptedData=request.getParameter(&quot;encryptedData&quot;);</span><br><span class="line">	    String iv = request.getParameter(&quot;iv&quot;);	</span><br><span class="line">	    WXBizDataCrypt wxBizDataCrypt = new WXBizDataCrypt(appId,sessionKey);</span><br><span class="line">	    System.out.println(wxBizDataCrypt.decrypt(encryptedData,iv));</span><br><span class="line">		System.out.println(encryptedData);</span><br><span class="line">		System.out.println(iv);</span><br><span class="line"></span><br><span class="line">		String stepInfoList=wxBizDataCrypt.decrypt(encryptedData,iv).getJSONArray(&quot;stepInfoList&quot;).toString();</span><br><span class="line">		</span><br><span class="line">		return &quot;success&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+
+<pre><code>接下来是已经解密成功的数据，处理数据，转换成想要的数据</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">//去除两端方括号</span><br><span class="line">stepInfoList = stepInfoList.replaceAll(&quot;[\\[\\]]&quot;, &quot;&quot;);</span><br><span class="line">//第一次分割</span><br><span class="line">String[] splitArray = stepInfoList.split(&quot;&#125;,&quot;);</span><br><span class="line">for(int i=0; i&lt;splitArray.length;i++) &#123;</span><br><span class="line">//去除大括号，好方法去除大括号就用了子串的方式</span><br><span class="line">if(i==splitArray.length-1) &#123;</span><br><span class="line">	splitArray[i]=splitArray[i].substring(1, splitArray[i].length()-1);</span><br><span class="line">&#125;else &#123;</span><br><span class="line">	splitArray[i]=splitArray[i].substring(1, splitArray[i].length());</span><br><span class="line">&#125;			</span><br><span class="line">Map&lt;String,Object&gt; map = new HashMap&lt;String,Object&gt;();</span><br><span class="line">//第二次分割</span><br><span class="line">String[] mapArray = splitArray[i].split(&quot;,&quot;);</span><br><span class="line">for(int j=0 ;j&lt;mapArray.length ;j++) &#123;</span><br><span class="line">	String str = mapArray[j].replaceAll(&quot;\&quot;&quot;, &quot;&quot;);</span><br><span class="line">	//第三次分割,为了防止value为空，下面加了一个长度判断</span><br><span class="line">	String[] keyValue = str.split(&quot;:&quot;);</span><br><span class="line">	if(keyValue.length==2) map.put(keyValue[0], keyValue[1]);</span><br><span class="line">	else map.put(keyValue[0], &quot;&quot;);</span><br><span class="line">&#125;</span><br><span class="line">list.add(map);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>	
 	</div>
 	
 	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -368,12 +355,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/05/03/java解密微信小程序运动数据/" title="java解密微信小程序运动数据" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2018/06/25/Myeclipse设置全局编码/" title="Myeclipse设置全局编码" rel="next">
+			<a href="/2019/04/13/百度富文本Ueditor编辑器的使用/" title="百度富文本Ueditor编辑器的使用" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -391,6 +374,31 @@
 <div class="relate-post">
 	
 		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/04/13/百度富文本Ueditor编辑器的使用/" title="百度富文本Ueditor编辑器的使用">
+								百度富文本Ueditor编辑器的使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								四月 13日, 2019				
+							</p>
+							<p class="relate-post-content">
+								UEditor官网下载地址：https://ueditor.baidu.com/website/download.html
+
+这里我下载的是jsp版本中的UTF-8版，然后将压缩包解压之后是这个样子解压内容中的index.html是官...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/04/13/百度富文本Ueditor编辑器的使用/" title="百度富文本Ueditor编辑器的使用">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="百度富文本Ueditor编辑器的使用"/>
+							</a>
+						</div>
+					</li>											
+			
 			
 					<li>
 						<div class="relate-post-text">
@@ -412,31 +420,6 @@
 							<a href="/2018/06/25/Myeclipse设置全局编码/" title="Myeclipse设置全局编码">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Myeclipse设置全局编码"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/05/03/java解密微信小程序运动数据/" title="java解密微信小程序运动数据">
-								java解密微信小程序运动数据			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								五月 3日, 2019				
-							</p>
-							<p class="relate-post-content">
-								想解密微信运动用户的步数，需获取到小程序的APPID，SESSIONKEY，encryptedData，iv
-
-WXBizDataCrypt为封装好的解密的工具类    12345678910111213141516171819202...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/05/03/java解密微信小程序运动数据/" title="java解密微信小程序运动数据">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="java解密微信小程序运动数据"/>
 							</a>
 						</div>
 					</li>											
